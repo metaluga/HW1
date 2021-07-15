@@ -10,7 +10,7 @@ public:
 	UniquePtr(T* _ptr = nullptr) : ptr(_ptr) {};
 
 	UniquePtr(UniquePtr<T>&& uptr) {
-		ptr = std::move(uptr.ptr);
+		ptr = uptr.ptr;
 		uptr.ptr = nullptr;
 	}
 
